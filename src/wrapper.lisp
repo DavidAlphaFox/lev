@@ -17,7 +17,7 @@
                         collect `(cl:defconstant ,value ,index))))
 
 (cl:eval-when (:compile-toplevel :load-toplevel)
-  (cl:unless (cl:fboundp 'lispify)
+  (cl:unless (cl:fboundp 'lispify) ;; when we not find the lispify function we define one
     (cl:defun lispify (name flag cl:&optional (package cl:*package*))
       (cl:labels ((helper (lst last rest cl:&aux (c (cl:car lst)))
                     (cl:cond

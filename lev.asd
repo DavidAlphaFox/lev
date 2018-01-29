@@ -11,7 +11,7 @@
 (defpackage lev-asd
   (:use :cl :asdf))
 (in-package :lev-asd)
-
+;; depends on cffi
 (defsystem lev
   :version "0.1.0"
   :author "Eitaro Fukamachi"

@@ -1,5 +1,5 @@
 (in-package :lev)
-
+;; add *features* when the lev-ev loaded
 #+lev-ev-full
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (pushnew :lev-ev-periodic *features*)
